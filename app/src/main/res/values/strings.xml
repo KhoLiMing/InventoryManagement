@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Inventory Management</string>
+    <string name="stitch_client_app_id">smart-bin-application-ssobs</string>
+    <string name="title_activity_welcome_page">WelcomePage</string>
+    <string name="title_activity_add__items">Add Items</string>
+</resources>
