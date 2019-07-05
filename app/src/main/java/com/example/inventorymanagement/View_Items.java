@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 public class View_Items extends AppCompatActivity {
 
@@ -23,6 +26,18 @@ public class View_Items extends AppCompatActivity {
         ActionBar ab = getSupportActionBar();
         ab.setDisplayHomeAsUpEnabled(true);
 
+
+        //generate list
+        ArrayList<String> list = new ArrayList<String>();
+        list.add("item1");
+        list.add("item2");
+
+        //instantiate custom adapter
+        CustomAdapter adapter = new CustomAdapter(list, this);
+
+        //handle listview and assign adapter
+        ListView lView = (ListView)findViewById(R.id.listview);
+        lView.setAdapter(adapter);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -49,4 +64,7 @@ public class View_Items extends AppCompatActivity {
 
         }
     }
+
+
+
 }
